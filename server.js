@@ -7,6 +7,8 @@ const expressLayout = require("express-ejs-layouts");
 const path = require("path");
 const mongoose = require("mongoose");
 const MongoDbStore = require("connect-mongo")(session);
+const passport = require('passport');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -32,6 +34,7 @@ let mongoStore = new MongoDbStore({
   collection: "sessions",
 });
 
+
 //Session Config
 app.use(
   session({
@@ -43,16 +46,25 @@ app.use(
   })
 );
 
+//Passport Config
+const passportInit = require('./app/config/passport');
+passportInit(passport);
+app.use(passport.initialize());
+app.use(passport.session());
+
+
 app.use(flash());
 
 //Global Middleware
 app.use((req, res, next) => {
   res.locals.session = req.session;
+  res.locals.user = req.user;
   next();
 });
 
 // Assets
 app.use(express.static("public"));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // Set Template Engine
