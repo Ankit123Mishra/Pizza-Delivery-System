@@ -47,6 +47,22 @@ function orderController() {
                 return res.render('customers/singleOrder', { order: order });
             }
             return res.redirect('/');
+        },
+
+        delete(req, res) {
+            var pizza = JSON.parse(req.body.pizza);
+            if (req.session.cart.items[pizza.item._id].qty === 1) {
+                delete req.session.cart.items[pizza.item._id];
+            }
+            else {
+                req.session.cart.items[pizza.item._id].qty -= 1;
+            }
+            req.session.cart.totalQty = req.session.cart.totalQty - 1;
+            req.session.cart.totalPrice = req.session.cart.totalPrice - parseInt(pizza.item.price);
+            if (req.session.cart.totalQty === 0) {
+                req.session.cart = null;
+            }
+            res.redirect('/cart');
         }
     }
 }

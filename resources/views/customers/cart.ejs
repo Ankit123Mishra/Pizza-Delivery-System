@@ -8,6 +8,13 @@
     <div class="pizza-list">
       <% for(let pizza of Object.values(session.cart.items)) { %>
       <div class="flex items-center my-8">
+        <button class="delete-pizza mr-5">
+          <form id="delete<%= pizza.item._id%>" action="/delete" method="POST">
+            <input type="hidden" name="pizza" value="<%= JSON.stringify(pizza) %>">
+            <a onclick="document.getElementById('delete'+ '<%= pizza.item._id %>').submit()" href="#"><i
+                class="las la-minus-circle"></i></a>
+          </form>
+        </button>
         <img class="w-24" src="/img/<%= pizza.item.image %>" alt="" />
         <div class="flex-1 ml-4">
           <h1><%= pizza.item.name %></h1>

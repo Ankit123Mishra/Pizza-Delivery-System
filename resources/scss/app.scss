@@ -44,6 +44,12 @@ section.hero {
   }
 }
 
+.order-now {
+  &:focus {
+    outline: none;
+  }
+}
+
 .btn-primary {
   background: $primary;
   transition: $smooth;
@@ -57,6 +63,10 @@ section.cart {
   .amount {
     color: $primary;
   }
+}
+
+.delete-pizza i {
+  color: #ff0000;
 }
 
 section.login {
