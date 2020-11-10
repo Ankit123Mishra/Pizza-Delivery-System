@@ -30,7 +30,7 @@ function initRoutes(app) {
   app.post("/orders", auth, orderController().store);
   app.get('/customer/orders', auth, orderController().index);
   app.get('/customer/orders/:id', auth, orderController().show);
-  app.post("/delete", auth, orderController().delete);
+  app.post("/delete", orderController().delete);
 
   // Admin routes
   app.get('/admin/orders', admin, adminOrderController().index);
