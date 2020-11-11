@@ -19,6 +19,15 @@
     </div>
     <div>
       <ul class="flex items-center">
+        <% if(user) { 
+          if(user.role === "admin") { %>
+        <span>Welcome, Admin!</span>
+        <% } else { %>
+        <span>Welcome, <%= user.name %>!</span>
+        <% } %>
+        <% } else { %>
+        <span>Hello Guest!</span>
+        <% } %>
         <li class="ml-6"><a href="/">Menu</a></li>
         <!-- <li class="ml-6"><a href="#">Offers</a></li> -->
         <% if(user) { %>
