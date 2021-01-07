@@ -331,6 +331,18 @@ section.hero {
   background: #f8f8f8;
 }
 
+section.menuTitle {
+  background: #f8f8f8;
+}
+
+a {
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #fe5f1e;
+}
+
 .size {
   background: #f8f8f8;
 }

@@ -1,0 +1,66 @@
+[
+    {
+        "_id": {
+            "$oid": "5eee651f739f8c674fd736e1"
+        },
+        "name": "Bestsellers",
+        "linkName": "bestsellers",
+        "image": "bestsellers.jpg"
+    },
+    {
+        "_id": {
+            "$oid": "5eee651f739f8c674fd736e2"
+        },
+        "name": "Veg Pizzas",
+        "linkName": "VegPizza",
+        "image": "veg-pizzas.jpg"
+    },
+    {
+        "_id": {
+            "$oid": "5eee651f739f8c674fd736e3"
+        },
+        "name": "Pizza Mania",
+        "linkName": "pizzaMania",
+        "image": "pizza-mania.jpg"
+    },
+    {
+        "_id": {
+            "$oid": "5eee651f739f8c674fd736e4"
+        },
+        "name": "Non-Veg Pizzas",
+        "linkName": "nonVegPizza",
+        "image": "nonveg-pizzas.png"
+    },
+    {
+        "_id": {
+            "$oid": "5eee651f739f8c674fd736e5"
+        },
+        "name": "Pasta Pizza Party",
+        "linkName": "pastaPizza",
+        "image": "pasta-pizzas.jpg"
+    },
+    {
+        "_id": {
+            "$oid": "5eee651f739f8c674fd736e6"
+        },
+        "name": "Meals & Combos",
+        "linkName": "meals",
+        "image": "mealcombo.jpg"
+    },
+    {
+        "_id": {
+            "$oid": "5eee651f739f8c674fd736e7"
+        },
+        "name": "Sides",
+        "linkName": "sides",
+        "image": "sides.jpg"
+    },
+    {
+        "_id": {
+            "$oid": "5eee651f739f8c674fd736e8"
+        },
+        "name": "Deserts",
+        "linkName": "deserts",
+        "image": "deserts.jpg"
+    }
+]

@@ -26,6 +26,16 @@ section.hero {
   background: $secondary;
 }
 
+section.menuTitle {
+  background: $secondary;
+}
+a {
+  transition: $smooth;
+  &:hover {
+    color: $primary;
+  }
+}
+
 .size {
   background: $secondary;
 }
