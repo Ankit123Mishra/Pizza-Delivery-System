@@ -27,7 +27,8 @@ function initRoutes(app) {
   app.post("/update-cart", cartController().update);
 
   //Pizza routes
-  app.post("/pizzas/:categoryName", homeController().pizzaMenu);
+  app.get("/pizzas/:id", homeController().pizzaMenu);
+  app.get("/offers", homeController().offersMenu);
 
   // Customer routes
   app.post("/orders", auth, orderController().store);

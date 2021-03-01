@@ -1,3 +1,16 @@
+<hr style="width:96%;height:2px;margin-left: 25px;">
+<div class="menu-navbar container mx-auto flex items-center justify-center px-10 py-5">
+  <div>
+    <ul class="flex items-center">
+      <span class="text-gray-400 text-2xl font-thin mr-4">|</span>
+      <% categories.forEach(function(category) { %>
+      <li class="text-l font-bold mr-4"><a href="/pizzas/<%= category._id %>"><%= category.name %></a><span
+          class="text-gray-400 text-2xl font-thin ml-5">|</span></li>
+      <% }) %>
+    </ul>
+  </div>
+</div>
+<hr style="width:96%;height:2px;margin-left: 25px;margin-bottom: 30px">
 <section class="hero py-16">
   <div class="container px-8 mx-auto flex items-center justify-between">
     <div class="w-1/2">
@@ -13,18 +26,53 @@
   </div>
 </section>
 <section id="Menu" class="menu container px-8 mx-auto py-8 mb-5">
+  <div class="mx-auto flex items-center justify-center">
+    <h1 class="font-bold text-3xl mb-5">Explore Menu</h1>
+  </div>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 col-gap-12 row-gap-16">
-    <% categories.forEach(function(category) { %>
     <div class="w-full md:w-64">
-      <img class="h-40 mb-4 mx-auto" src="/img/<%= category.image %>" alt="" />
+      <img class="h-40 mb-4 mx-auto" src="/img/<%= categories[0].image %>" alt="" />
       <div class="text-center">
-        <form id="category-form-<%= category._id %>" action="/pizzas/<%= category.linkName %>" method="POST">
-          <input type="hidden" name="category_id" value="<%= category._id %>"></input>
-          <input type="hidden" name="categoryName" value="<%= category.name %>"></input>
-          <h2 id="cat" class="mb-4 text-lg"><a
-              onclick="document.getElementById('category-form-<%= category._id %>').submit()"
-              href="#"><%= category.name %></a></h2>
-        </form>
+        <h2 id="cat" class="mb-4 text-lg"><a href="/pizzas/<%= categories[0]._id %>"><%= categories[0].name %></a></h2>
+      </div>
+    </div>
+    <div class="w-full md:w-64">
+      <img class="h-40 mb-4 mx-auto" src="/img/<%= categories[5].image %>" alt="" />
+      <div class="text-center">
+        <h2 id="cat" class="mb-4 text-lg"><a href="/pizzas/<%= categories[5]._id %>"><%= categories[5].name %></a></h2>
+      </div>
+    </div>
+    <div class="w-full md:w-64">
+      <img class="h-40 mb-4 mx-auto" src="/img/<%= categories[6].image %>" alt="" />
+      <div class="text-center">
+        <h2 id="cat" class="mb-4 text-lg"><a href="/pizzas/<%= categories[6]._id %>"><%= categories[6].name %></a></h2>
+      </div>
+    </div>
+    <div class="w-full md:w-64">
+      <img class="h-40 mb-4 mx-auto" src="/img/<%= categories[7].image %>" alt="" />
+      <div class="text-center">
+        <h2 id="cat" class="mb-4 text-lg"><a href="/pizzas/<%= categories[7]._id %>"><%= categories[7].name %></a></h2>
+      </div>
+    </div>
+  </div>
+  <div class="mx-auto flex items-center justify-center">
+    <h1 class="font-bold text-3xl mb-10 mt-10">Jaw Dropping Deals!</h1>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 col-gap-12 row-gap-16">
+    <% pizzas.forEach(function(pizza) { %>
+    <div class="w-full md:w-64">
+      <img class="h-40 mb-4 mx-auto" src="/img/<%= pizza.image %>" alt="" />
+      <div class="text-center">
+        <h2 class="mb-4 text-lg"><%= pizza.name %></h2>
+        <span class="size py-1 px-4 rounded-full uppercase text-xs"><%= pizza.size %></span>
+        <div class="flex items-center justify-around mt-6">
+          <span class="font-bold text-lg">$<%= pizza.price %></span>
+          <button data-pizza="<%= JSON.stringify(pizza) %>"
+            class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
+            <span>+</span>
+            <span class="ml-4">Add</span>
+          </button>
+        </div>
       </div>
     </div>
     <% }) %>

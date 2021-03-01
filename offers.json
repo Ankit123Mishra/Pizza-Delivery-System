@@ -1,0 +1,74 @@
+[
+    {
+        "_id": {
+            "$oid": "5eee651f739f8c674fd736e1"
+        },
+        "title": "2 Pizzas @ 199 each",
+        "description": "Select any 2 Medium Pizzas Worth 305 @ ₹199 each",
+        "priceAdjustment": 30,
+        "isPercentage": false,
+        "maxDiscount": 30,
+        "couponCode": "DEAL199",
+        "image": "offer1.jpg"
+    },
+    {
+        "_id": {
+            "$oid": "5eee651f739f8c674fd736e2"
+        },
+        "title": "2 Pizzas @ 199 each",
+        "description": "Select any 2 Medium Pizzas Worth 305 @ ₹199 each",
+        "priceAdjustment": 30,
+        "isPercentage": false,
+        "maxDiscount": 30,
+        "couponCode": "DEALVG49",
+        "image": "offer2.jpg"
+    },
+    {
+        "_id": {
+            "$oid": "5eee651f739f8c674fd736e3"
+        },
+        "title": "2 Pizzas @ 199 each",
+        "description": "Select any 2 Medium Pizzas Worth 305 @ ₹199 each",
+        "priceAdjustment": 30,
+        "isPercentage": false,
+        "maxDiscount": 30,
+        "couponCode": "DEALNONVEG299",
+        "image": "offer3.jpg"
+    },
+    {
+        "_id": {
+            "$oid": "5eee651f739f8c674fd736e4"
+        },
+        "title": "2 Pizzas @ 199 each",
+        "description": "Select any 2 Medium Pizzas Worth 305 @ ₹199 each",
+        "priceAdjustment": 30,
+        "isPercentage": false,
+        "maxDiscount": 30,
+        "couponCode": "SALE2021",
+        "image": "offer4.jpg"
+    },
+    {
+        "_id": {
+            "$oid": "5eee651f739f8c674fd736e5"
+        },
+        "title": "2 Pizzas @ 199 each",
+        "description": "Select any 2 Medium Pizzas Worth 305 @ ₹199 each",
+        "priceAdjustment": 30,
+        "isPercentage": false,
+        "maxDiscount": 30,
+        "couponCode": "NEWYEAR2021",
+        "image": "offer5.jpg"
+    },
+    {
+        "_id": {
+            "$oid": "5eee651f739f8c674fd736e6"
+        },
+        "title": "2 Pizzas @ 199 each",
+        "description": "Select any 2 Medium Pizzas Worth 305 @ ₹199 each",
+        "priceAdjustment": 30,
+        "isPercentage": false,
+        "maxDiscount": 30,
+        "couponCode": "DEAL699",
+        "image": "offer6.jpg"
+    }
+]

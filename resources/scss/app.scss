@@ -26,9 +26,9 @@ section.hero {
   background: $secondary;
 }
 
-section.menuTitle {
-  background: $secondary;
-}
+// section.menuTitle {
+//   background: $secondary;
+// }
 a {
   transition: $smooth;
   &:hover {
@@ -233,4 +233,250 @@ section.status {
 
 footer {
    background: $secondary;
+}
+
+// .coupon {
+//   border: 2px solid #000000; /* Dotted border */
+//   width: 80%;
+//   border-radius: 15px; /* Rounded border */
+//   margin: 0 auto; /* Center the coupon */
+//   margin-top: 10px;
+//   margin-bottom: 10px;
+//   max-width: 600px;
+// }
+
+// .portion {
+//   padding: 2px 16px;
+//   background-color: #ffffff;
+// }
+
+// .promo {
+//   background: #ccc;
+//   padding: 3px;
+// }
+
+// .expire {
+//   color: red;
+// }
+
+// .offers {
+//   background-color: #eee;
+//   display: flex;
+//   // justify-content: center;
+//   align-items: center;
+// }
+
+// .offers-grid {
+//   display: grid;
+//   width: 114em;
+//   grid-gap: 6rem;
+//   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+//   align-items: start;
+// }
+
+// .offers-grid-item {
+//   background-color: #fff;
+//   border-radius: 0.4rem;
+//   overflow: hidden;
+//   box-shadow: 0 3rem 6rem rgba(0,0,0,0.1);
+//   cursor: pointer;
+//   transition: 0.2s;
+// }
+
+// .offers-grid-item:hover {
+//   transform: translateY(-0.5%);
+//   box-shadow: 0 4rem 8rem rgba(0,0,0,0.5);
+// }
+
+// .card-img {
+//   display: block;
+//   width: 100%;
+//   height: 20rem;
+//   object-fit: cover;
+// }
+
+// .card-content {
+//   padding: 3rem;
+// }
+
+// .card-header {
+//   // font-size: 3rem;
+//   // font-weight: 500;
+//   color: #0d0d0d;
+//   margin-bottom: 1.5rem;
+// }
+
+// .card-text {
+//   font-size: 1.6rem;
+//   letter-spacing: 0.1rem;
+//   line-height: 1.7;
+//   color: #3d3d3d;
+//   margin-bottom: 2.5rem;
+// }
+
+// .card-btn {
+//   display: block;
+//   width: 100%;
+//   padding: 1.5rem;
+//   font-size: 2rem;
+//   text-align: center;
+//   color: #3363ff;
+//   background-color: #d8e0fd;
+//   border: none;
+//   border-radius: 0.4rem;
+//   cursor: pointer;
+//   letter-spacing: 0.1rem;
+// }
+
+// .card-btn span {
+//   margin-left: 1rem;
+//   transition: 0.2s;
+// }
+
+// .card-btn:hover,
+// .card-btn:active span{
+//   margin-left: 1.5rem;
+// }
+
+/* Font */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+  // background-color: #ecf9ff;
+  margin-bottom: 20px;
+}
+
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  // display: block;
+  width: 100%;
+  // cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+.copy_image {
+  height: 30px;
+  width: 30px;
+}
+
+// .btn:hover {
+//   background-color: rgba(255, 255, 255, 0.12);
+// }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card_image {
+  height: 260px;
+  width: 400px;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+}
+
+.card_title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+
+.copy_to_clipboard {
+  position: relative;
+  display: inline-block;
+  &:focus {
+    outline: none;
+  }
+}
+
+.copy_to_clipboard .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.copy_to_clipboard .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.copy_to_clipboard:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }

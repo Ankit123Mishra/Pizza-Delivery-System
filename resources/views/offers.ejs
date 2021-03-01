@@ -1,0 +1,83 @@
+<section class="offers">
+    <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 col-gap-12 row-gap-16">
+        <div class="coupon">
+            <img src="/img/pizza-with-drinks.jpg" alt="Avatar"
+                style="width:100%;border-top-left-radius: 15px;border-top-right-radius: 15px;">
+            <div class="portion">
+                <h2><b>20% OFF YOUR PURCHASE</b></h2>
+                <p>Lorem ipsum..</p>
+            </div>
+            <div class="portion" style="border-radius: 15px;">
+                <p>Use Promo Code: <span class="promo">BOH232</span></p>
+                <p class="expire">Expires: Jan 03, 2021</p>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div>
+        <div class="ml-10 mb-10 mt-10">
+        <img src="/img/pizza-with-drinks.jpg" alt=""
+            style="height: 300px;width: 500px; border-radius: 15px;background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);">
+    </div>
+    </div>
+    </div> -->
+    <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 col-gap-12 row-gap-16">
+        <div class="offers-grid-item">
+            <div class="card">
+                <img class="card-img" src="/img/pizza-with-drinks.jpg" alt="Rome">
+                <div class="card-content">
+                    <h1 class="card-header">Rome</h1>
+                    <p class="card-text">
+                        Rome is known for its stunning <strong>architecture</strong>
+                        with the Colleseum, Pantheon, and Trevi Fountain attractions.
+                    </p>
+                    <button class="card-btn">
+                        Vist <span>&rarr;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="mx-auto flex items-center justify-center">
+        <h1 class="font-bold text-3xl mb-5">Everyday Value Offers</h1>
+    </div>
+    <div class="main">
+        <ul class="cards">
+            <% offers.forEach(function(offer) { %>
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img src="img/<%= offer.image %>"></div>
+                    <div class="card_content">
+                        <h2 class="card_title"><%= offer.title %></h2>
+                        <br>
+                        <p class="card_text"><%= offer.description %></p>
+                        <p class="card_text">Use the below Coupon Code to avail this offer.</p>
+                        <div class="btn card_btn text-center flex items-center justify-center">
+                            <p class="font-bold text-s" id="coupon-<%= offer._id %>"><%= offer.couponCode %></p>
+                            <button class="copy_to_clipboard" onclick="copyToClipboard('#coupon-<%= offer._id %>')"
+                                onmouseout="outFunc()">
+                                <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                <img class="copy_image ml-3" src="/img/copy-to-clipboard.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <% }) %>
+        </ul>
+    </div>
+    <script>
+        function copyToClipboard(element) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            $temp.remove();
+        }
+
+
+        function outFunc() {
+            var tooltip = document.getElementById("myTooltip");
+            tooltip.innerHTML = "Copy to clipboard";
+        }
+    </script>
+</section>
